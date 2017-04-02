@@ -11,11 +11,20 @@ import MapKit
 
 class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate {
 
-    @IBOutlet weak var MainMap: MKMapView!
+    @IBOutlet weak var mainMap: MKMapView!
+    
+    let locManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.locManager.delegate = self
+        
+        self.locManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locManager.requestWhenInUseAuthorization()
+        self.locManager.startUpdatingLocation()
+        self.mainMap.showsUserLocation = true
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,14 +33,18 @@ class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate
     }
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // location delgate method
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let loc = locations.last
+        let userCenter = CLLocationCoordinate2D(latitude: loc!.coordinate.latitude, longitude: loc!.coordinate.longitude)
+        let region  = MKCoordinateRegion(center: userCenter, span:MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)) // zoon level
+        self.mainMap.setRegion(region, animated: true)
+        self.locManager.stopUpdatingLocation()
     }
-    */
-
+    
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error" + error.localizedDescription)
+    }
+    
 }
