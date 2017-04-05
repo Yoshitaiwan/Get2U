@@ -84,12 +84,12 @@ class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate
             print ("not registered as MKPOINT ANNOTATION")
             return nil
         }
-        var annotationView = mainMap.dequeueReusableAnnotationView(withIdentifier: "indentifier")
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "pokemonIdentitfier")
         if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "identifer")
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pokemonIdentitfier")
             annotationView!.canShowCallout = true
         }else{
-            annotationView?.annotation = annotation
+            annotationView!.annotation = annotation
         }
         
         annotationView!.image = UIImage(named: "pickachu.png")
