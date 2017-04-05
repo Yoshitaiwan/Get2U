@@ -17,6 +17,9 @@
 		922BCDDD1E8FDEEE00449FD3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 922BCDDC1E8FDEEE00449FD3 /* GoogleService-Info.plist */; };
 		925E26DA1E8FF15C0075769F /* MainMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925E26D91E8FF15C0075769F /* MainMapVC.swift */; };
 		925E26DC1E8FFB1D0075769F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925E26DB1E8FFB1D0075769F /* MapKit.framework */; };
+		927F89AF1E9416B4008FE635 /* Sandwich.png in Resources */ = {isa = PBXBuildFile; fileRef = 927F89AE1E9416B4008FE635 /* Sandwich.png */; };
+		927F89B11E9416C1008FE635 /* Coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 927F89B01E9416C1008FE635 /* Coffee.png */; };
+		927F89B31E942ACA008FE635 /* pikachu.png in Resources */ = {isa = PBXBuildFile; fileRef = 927F89B21E942ACA008FE635 /* pikachu.png */; };
 		9CBA60BE54CD8B22511D2A16 /* Pods_Get2U.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D01781780049F1788AFD6C /* Pods_Get2U.framework */; };
 		C46FBC306F3FD08ED3FFDCC7 /* Pods_Get2UUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E073F40C7EFA36CAC44D531 /* Pods_Get2UUITests.framework */; };
 		D6F70898BB172674E71C7742 /* Pods_Get2UTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5D1F33FBDF50D53BC741C7 /* Pods_Get2UTests.framework */; };
@@ -63,6 +66,9 @@
 		922BCDDC1E8FDEEE00449FD3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		925E26D91E8FF15C0075769F /* MainMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapVC.swift; sourceTree = "<group>"; };
 		925E26DB1E8FFB1D0075769F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		927F89AE1E9416B4008FE635 /* Sandwich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sandwich.png; sourceTree = "<group>"; };
+		927F89B01E9416C1008FE635 /* Coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Coffee.png; sourceTree = "<group>"; };
+		927F89B21E942ACA008FE635 /* pikachu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pikachu.png; sourceTree = "<group>"; };
 		B14CA95C5D6E7328F9633901 /* Pods-Get2U.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get2U.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Get2U/Pods-Get2U.debug.xcconfig"; sourceTree = "<group>"; };
 		D1F5F1A50E0FD4F26FA632AE /* Pods_Get2U.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get2U.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1EA40588C3398B20CE80DB /* Pods-Get2U.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get2U.release.xcconfig"; path = "Pods/Target Support Files/Pods-Get2U/Pods-Get2U.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 		922BCDAD1E8FDD8B00449FD3 /* Get2U */ = {
 			isa = PBXGroup;
 			children = (
+				927F89AD1E941617008FE635 /* resources */,
 				922BCDAE1E8FDD8B00449FD3 /* AppDelegate.swift */,
 				922BCDB21E8FDD8B00449FD3 /* Main.storyboard */,
 				925E26D91E8FF15C0075769F /* MainMapVC.swift */,
@@ -187,6 +194,16 @@
 				922BCDD01E8FDD8B00449FD3 /* Info.plist */,
 			);
 			path = Get2UUITests;
+			sourceTree = "<group>";
+		};
+		927F89AD1E941617008FE635 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				927F89B21E942ACA008FE635 /* pikachu.png */,
+				927F89B01E9416C1008FE635 /* Coffee.png */,
+				927F89AE1E9416B4008FE635 /* Sandwich.png */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,8 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				922BCDDD1E8FDEEE00449FD3 /* GoogleService-Info.plist in Resources */,
+				927F89AF1E9416B4008FE635 /* Sandwich.png in Resources */,
 				922BCDB61E8FDD8B00449FD3 /* Assets.xcassets in Resources */,
 				922BCDB41E8FDD8B00449FD3 /* Main.storyboard in Resources */,
+				927F89B11E9416C1008FE635 /* Coffee.png in Resources */,
+				927F89B31E942ACA008FE635 /* pikachu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
