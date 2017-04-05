@@ -80,21 +80,25 @@ class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate
   
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
     {
-        if !(annotation is MKPointAnnotation){
-            print ("not registered as MKPOINT ANNOTATION")
+        if !(annotation is MKPointAnnotation) {
+            print("NOT REGISTERED AS MKPOINTANNOTATION")
             return nil
         }
+        
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "pokemonIdentitfier")
         if annotationView == nil {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pokemonIdentitfier")
             annotationView!.canShowCallout = true
-        }else{
+        }
+            
+        else {
             annotationView!.annotation = annotation
         }
         
-        annotationView!.image = UIImage(named: "pickachu.png")
+        //  let cpa = annotation as! CustomPointAnnotation
+        annotationView!.image = UIImage(named: "pikachu.png")
+        
         return annotationView
-    
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
