@@ -19,7 +19,7 @@ import MapKit
 
 class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate {
 
-    class CustomPointAnnotation: MKMapView{
+    class CustomPointAnnotation: MKPointAnnotation{
         var imageName: String!
     }
     
@@ -54,24 +54,26 @@ class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate
         self.mainMap.setRegion(region, animated: true)
     
      // hard cording for testing 
-        
+        //@ to do. limit the scope, change the range
         let coffeeLoc = CLLocationCoordinate2D(latitude: loc!.coordinate.latitude * 1.0001, longitude: loc!.coordinate.longitude)
+        let sandwitchLoc = CLLocationCoordinate2D(latitude: loc!.coordinate.latitude * 1.0001, longitude: loc!.coordinate.longitude * 1.00001)
         
         
         
-     //   mainMap.removeAnnotations(mainMap.annotations)
+       mainMap.removeAnnotations(mainMap.annotations)
         
-        let coffeeAnnotation = MKPointAnnotation()
+        let coffeeAnnotation = CustomPointAnnotation()
         coffeeAnnotation.coordinate = coffeeLoc
         coffeeAnnotation.title = "test coffee"
+        coffeeAnnotation.imageName = "Coffee.png"
         
-        let userAnnotation = MKPointAnnotation()
-        userAnnotation.coordinate = userLoc
-        userAnnotation.title = "test mee"
-   
+        let sandwitchAnnotation = CustomPointAnnotation()
+        sandwitchAnnotation.coordinate = sandwitchLoc
+        sandwitchAnnotation.title = "test sandwitch"
+        sandwitchAnnotation.imageName = "Sandwich.png"
         
         mainMap.addAnnotation(coffeeAnnotation)
-        mainMap.addAnnotation(userAnnotation)
+        mainMap.addAnnotation(sandwitchAnnotation)
         
         
        self.locManager.stopUpdatingLocation()
@@ -80,8 +82,8 @@ class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate
   
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
     {
-        if !(annotation is MKPointAnnotation) {
-            print("NOT REGISTERED AS MKPOINTANNOTATION")
+        if !(annotation is MKPointAnnotation){
+            print ("not registered as MKPOINT ANNOTATION")
             return nil
         }
         
@@ -90,15 +92,21 @@ class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pokemonIdentitfier")
             annotationView!.canShowCallout = true
         }
-            
+        
         else {
             annotationView!.annotation = annotation
         }
         
-        //  let cpa = annotation as! CustomPointAnnotation
-        annotationView!.image = UIImage(named: "pikachu.png")
+        if let cpa = annotation as? CustomPointAnnotation {
+            if let aView = annotationView{
+                aView.image = UIImage(named:cpa.imageName)
+            }
+        }else{
+            print ("failed to down cast to CustomPointAnnotation")
+        }
         
         return annotationView
+    
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
