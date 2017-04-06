@@ -7,16 +7,17 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="126" id="KGk-i7-Jjw" customClass="MenuTableViewCell" customModule="Get2U" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="353" height="126"/>
+            <rect key="frame" x="0.0" y="0.0" width="353" height="128"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="353" height="126"/>
+                <rect key="frame" x="0.0" y="0.0" width="353" height="128"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNc-uV-CbI">
@@ -27,45 +28,54 @@
                             <constraint firstAttribute="width" secondItem="MNc-uV-CbI" secondAttribute="height" multiplier="113:124" id="t7h-o1-Rjk"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyq-eJ-hXG">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyq-eJ-hXG" colorLabel="IBBuiltInLabel-Gray">
                         <rect key="frame" x="5" y="44" width="234" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="234" id="Y5Q-j4-DXh"/>
+                            <constraint firstAttribute="height" constant="42" id="gR6-TT-4wB"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1D-tQ-b1Z">
-                        <rect key="frame" x="5" y="82" width="234" height="42"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1D-tQ-b1Z">
+                        <rect key="frame" x="5" y="103" width="234" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3I-62-DQ6">
-                        <rect key="frame" x="8" y="0.0" width="234" height="42"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3I-62-DQ6">
+                        <rect key="frame" x="5" y="-2" width="234" height="42"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="L3I-62-DQ6" firstAttribute="trailing" secondItem="MNc-uV-CbI" secondAttribute="trailing" id="Gdv-tn-iLa"/>
+                    <constraint firstItem="L3I-62-DQ6" firstAttribute="leading" secondItem="yyq-eJ-hXG" secondAttribute="leading" id="72d-75-oGO"/>
+                    <constraint firstItem="L3I-62-DQ6" firstAttribute="trailing" secondItem="yyq-eJ-hXG" secondAttribute="trailing" id="EYD-lu-LuT"/>
+                    <constraint firstItem="w1D-tQ-b1Z" firstAttribute="leading" secondItem="yyq-eJ-hXG" secondAttribute="leading" id="NJ4-lN-6oq"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="yyq-eJ-hXG" secondAttribute="bottom" constant="33.5" id="UNf-d3-vPd"/>
+                    <constraint firstItem="w1D-tQ-b1Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-3" id="X2B-HT-cok"/>
+                    <constraint firstItem="L3I-62-DQ6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-9" id="eVe-PV-8Hg"/>
+                    <constraint firstItem="w1D-tQ-b1Z" firstAttribute="trailing" secondItem="yyq-eJ-hXG" secondAttribute="trailing" id="fhJ-OC-GA3"/>
+                    <constraint firstItem="yyq-eJ-hXG" firstAttribute="top" secondItem="L3I-62-DQ6" secondAttribute="bottom" constant="3" id="glk-ex-xHh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="w1D-tQ-b1Z" secondAttribute="bottom" constant="-4.5" id="oNa-cN-1Ah"/>
+                    <constraint firstItem="L3I-62-DQ6" firstAttribute="top" secondItem="MNc-uV-CbI" secondAttribute="top" id="ybd-sa-pxe"/>
                 </constraints>
             </tableViewCellContentView>
             <constraints>
-                <constraint firstItem="L3I-62-DQ6" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="7" id="8q1-LH-Dq5"/>
                 <constraint firstAttribute="trailing" secondItem="MNc-uV-CbI" secondAttribute="trailing" constant="2" id="9Tt-V1-DG6"/>
-                <constraint firstItem="w1D-tQ-b1Z" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="5" id="Gbq-og-jdu"/>
-                <constraint firstItem="yyq-eJ-hXG" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="5" id="Xfk-Dk-OJ6"/>
                 <constraint firstItem="MNc-uV-CbI" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="240" id="dsE-RG-rNz"/>
                 <constraint firstAttribute="bottom" secondItem="MNc-uV-CbI" secondAttribute="bottom" constant="2" id="ySx-Ef-kdn"/>
             </constraints>
             <connections>
-                <outlet property="DescriptionLabel" destination="yyq-eJ-hXG" id="UWg-VL-mjD"/>
-                <outlet property="MenuImageView" destination="MNc-uV-CbI" id="T92-7c-B0l"/>
-                <outlet property="itemLable" destination="L3I-62-DQ6" id="GAN-sV-u98"/>
+                <outlet property="descriptionLabel" destination="yyq-eJ-hXG" id="VfN-ow-NMi"/>
+                <outlet property="itemLabel" destination="L3I-62-DQ6" id="lgE-xD-Va9"/>
                 <outlet property="menuImageView" destination="MNc-uV-CbI" id="2yq-1c-Zax"/>
-                <outlet property="priceLabel" destination="w1D-tQ-b1Z" id="4Fi-E3-1RQ"/>
+                <outlet property="priceLabel" destination="w1D-tQ-b1Z" id="41C-9W-Xnt"/>
             </connections>
-            <point key="canvasLocation" x="-8" y="-121"/>
+            <point key="canvasLocation" x="-750" y="-233"/>
         </tableViewCell>
     </objects>
 </document>

@@ -23,6 +23,10 @@
 		92E849B41E962E9A008E9B89 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E849B31E962E9A008E9B89 /* MenuTableViewController.swift */; };
 		92E849B71E962FC5008E9B89 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E849B51E962FC5008E9B89 /* MenuTableViewCell.swift */; };
 		92E849B81E962FC5008E9B89 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92E849B61E962FC5008E9B89 /* MenuTableViewCell.xib */; };
+		92E849BD1E967AAF008E9B89 /* latte.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E849B91E967AAF008E9B89 /* latte.png */; };
+		92E849BE1E967AAF008E9B89 /* Americano.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E849BA1E967AAF008E9B89 /* Americano.png */; };
+		92E849BF1E967AAF008E9B89 /* hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E849BB1E967AAF008E9B89 /* hotdog.png */; };
+		92E849C01E967AAF008E9B89 /* toasty.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 92E849BC1E967AAF008E9B89 /* toasty.jpeg */; };
 		9CBA60BE54CD8B22511D2A16 /* Pods_Get2U.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D01781780049F1788AFD6C /* Pods_Get2U.framework */; };
 		C46FBC306F3FD08ED3FFDCC7 /* Pods_Get2UUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E073F40C7EFA36CAC44D531 /* Pods_Get2UUITests.framework */; };
 		D6F70898BB172674E71C7742 /* Pods_Get2UTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5D1F33FBDF50D53BC741C7 /* Pods_Get2UTests.framework */; };
@@ -75,6 +79,10 @@
 		92E849B31E962E9A008E9B89 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		92E849B51E962FC5008E9B89 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		92E849B61E962FC5008E9B89 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		92E849B91E967AAF008E9B89 /* latte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = latte.png; sourceTree = "<group>"; };
+		92E849BA1E967AAF008E9B89 /* Americano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Americano.png; sourceTree = "<group>"; };
+		92E849BB1E967AAF008E9B89 /* hotdog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotdog.png; sourceTree = "<group>"; };
+		92E849BC1E967AAF008E9B89 /* toasty.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = toasty.jpeg; sourceTree = "<group>"; };
 		B14CA95C5D6E7328F9633901 /* Pods-Get2U.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get2U.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Get2U/Pods-Get2U.debug.xcconfig"; sourceTree = "<group>"; };
 		D1F5F1A50E0FD4F26FA632AE /* Pods_Get2U.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get2U.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1EA40588C3398B20CE80DB /* Pods-Get2U.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get2U.release.xcconfig"; path = "Pods/Target Support Files/Pods-Get2U/Pods-Get2U.release.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +216,10 @@
 		927F89AD1E941617008FE635 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				92E849B91E967AAF008E9B89 /* latte.png */,
+				92E849BA1E967AAF008E9B89 /* Americano.png */,
+				92E849BB1E967AAF008E9B89 /* hotdog.png */,
+				92E849BC1E967AAF008E9B89 /* toasty.jpeg */,
 				927F89B21E942ACA008FE635 /* pikachu.png */,
 				927F89B01E9416C1008FE635 /* Coffee.png */,
 				927F89AE1E9416B4008FE635 /* Sandwich.png */,
@@ -342,6 +354,10 @@
 				922BCDB61E8FDD8B00449FD3 /* Assets.xcassets in Resources */,
 				922BCDB41E8FDD8B00449FD3 /* Main.storyboard in Resources */,
 				927F89B11E9416C1008FE635 /* Coffee.png in Resources */,
+				92E849BD1E967AAF008E9B89 /* latte.png in Resources */,
+				92E849BE1E967AAF008E9B89 /* Americano.png in Resources */,
+				92E849C01E967AAF008E9B89 /* toasty.jpeg in Resources */,
+				92E849BF1E967AAF008E9B89 /* hotdog.png in Resources */,
 				927F89B31E942ACA008FE635 /* pikachu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

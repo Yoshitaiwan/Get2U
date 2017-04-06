@@ -8,18 +8,22 @@
 
 import UIKit
 
+
 class MenuTableViewCell: UITableViewCell {
 
     
+   
     @IBOutlet weak var menuImageView: UIImageView!
-    @IBOutlet weak var itemLable: UILabel!
+    @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    @IBOutlet weak var DescriptionLabel: UILabel!
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

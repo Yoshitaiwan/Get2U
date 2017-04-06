@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yHC-LG-zIC">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yHC-LG-zIC">
+                                <rect key="frame" x="0.0" y="10" width="375" height="657"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -34,15 +34,20 @@
                             <constraint firstAttribute="trailingMargin" secondItem="yHC-LG-zIC" secondAttribute="trailing" constant="-16" id="zEw-p6-yjn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iJV-DR-29J"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="iJV-DR-29J" colorLabel="IBBuiltInLabel-Orange">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="pJM-6t-6sx"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="MBq-Eh-Uaz"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="leftButtonItem" destination="pJM-6t-6sx" id="Ofj-Pk-jcf"/>
                         <outlet property="mainMap" destination="yHC-LG-zIC" id="kb2-y2-a7r"/>
                         <segue destination="ZCH-YG-Pt0" kind="show" identifier="ShowMenu" id="oH1-Jk-d8t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-106276" y="-4105"/>
+            <point key="canvasLocation" x="-106276" y="-4105.0974512743633"/>
         </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="SBA-56-OlG">

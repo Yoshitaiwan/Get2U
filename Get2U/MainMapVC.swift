@@ -20,6 +20,7 @@ import MapKit
 class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate {
     fileprivate let showNextScreenForMenu = "ShowMenu"
 
+    @IBOutlet weak var leftButtonItem: UIBarButtonItem!
     class CustomPointAnnotation: MKPointAnnotation{
         var imageName: String!
     }
@@ -27,6 +28,12 @@ class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate
     @IBOutlet weak var mainMap: MKMapView!
     
     let locManager = CLLocationManager()
+    
+    
+   // override func viewWillAppear(_ animated: Bool) {
+       //let navi =  self.navigationController?.navigationBar
+       // navi?.isTranslucent = true
+   // }
     
     override func viewDidLoad() {
         super.viewDidLoad()
