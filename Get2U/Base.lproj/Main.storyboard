@@ -10,6 +10,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--SettingViewController-->
+        <scene sceneID="GN0-hV-wKN">
+            <objects>
+                <tableViewController title="SettingViewController" id="L71-VQ-hEe" customClass="SettingTableViewController" customModule="Get2U" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UK2-eP-IHJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="j8V-tt-FO2">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j8V-tt-FO2" id="qlE-Bo-no9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="L71-VQ-hEe" id="5bp-bY-Bkv"/>
+                            <outlet property="delegate" destination="L71-VQ-hEe" id="YK4-07-Sk8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Jy6-N7-7bh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDh-f3-otx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106055" y="-4012"/>
+        </scene>
         <!--Main MapVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -36,11 +65,12 @@
                     </view>
                     <connections>
                         <outlet property="mainMap" destination="yHC-LG-zIC" id="kb2-y2-a7r"/>
+                        <segue destination="L71-VQ-hEe" kind="show" identifier="show Menu" id="PxV-MA-EQ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-107249" y="-4012"/>
         </scene>
     </scenes>
 </document>

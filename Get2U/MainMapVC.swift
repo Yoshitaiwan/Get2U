@@ -18,6 +18,7 @@ import UIKit
 import MapKit
 
 class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate {
+    fileprivate let showNextScreenForMenu = "show Menu"
 
     class CustomPointAnnotation: MKPointAnnotation{
         var imageName: String!
@@ -66,6 +67,7 @@ class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate
         coffeeAnnotation.coordinate = coffeeLoc
         coffeeAnnotation.title = "test coffee"
         coffeeAnnotation.imageName = "Coffee.png"
+        //coffeeAnnotation.
         
         let sandwitchAnnotation = CustomPointAnnotation()
         sandwitchAnnotation.coordinate = sandwitchLoc
@@ -100,6 +102,7 @@ class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate
         if let cpa = annotation as? CustomPointAnnotation {
             if let aView = annotationView{
                 aView.image = UIImage(named:cpa.imageName)
+                 aView.rightCalloutAccessoryView = UIButton.init(type: UIButtonType.detailDisclosure)
             }
         }else{
             print ("failed to down cast to CustomPointAnnotation")
@@ -108,6 +111,19 @@ class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate
         return annotationView
     
     }
+    
+    // Annotation (righ callout Accessory clicked)
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        print ("accesory clicked")
+        performSegue(withIdentifier: showNextScreenForMenu, sender: view)
+        
+    }
+    
+   /* func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print("Annotation selected")
+        
+    }
+    */
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error" + error.localizedDescription)
