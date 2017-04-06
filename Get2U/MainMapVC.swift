@@ -18,7 +18,7 @@ import UIKit
 import MapKit
 
 class MainMapVC: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate {
-    fileprivate let showNextScreenForMenu = "show Menu"
+    fileprivate let showNextScreenForMenu = "ShowMenu"
 
     class CustomPointAnnotation: MKPointAnnotation{
         var imageName: String!
